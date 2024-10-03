@@ -19,8 +19,11 @@ void main() {
       }
     }
   }
-  for (final pessoa in listaDePessoas) {
-    final nomeENumero = pessoa.split("/");
+  listaDePessoas.forEach((nomeTelefone) {
+    final nomeENumero = nomeTelefone.split('/');
     print("Nome: ${nomeENumero[0]} Número: ${nomeENumero[1]}");
-  }
+  });
+
+  listaDePessoas.forEach((nomeTelefone) => print("Nome: ${nomeTelefone.split('/')[0]} Número: ${nomeTelefone.split('/')[1]}"));
+
 }
